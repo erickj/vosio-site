@@ -54,12 +54,32 @@
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def url_for(sym)
+    case sym
+    when :get_started then
+      "getting-stared.html"
+    when :music then
+      "music.html"
+    when :vm then
+      "voicemail.html"
+    else
+      "404.html"
+    end
+  end
+
+  def app_name
+    "vos.io"
+  end
+
   def site_title
-    "Twitter Bootstrap, for Middleman"
+    "< %s | PBX Enhancements >"%app_name
+  end
+
+  def body_classes
   end
 
   def logo
-    "@middleman"
+    "< %s >"%app_name
   end
 end
 

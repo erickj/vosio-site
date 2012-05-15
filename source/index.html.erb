@@ -1,26 +1,67 @@
 <!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-  <h1>Hello, Middleman!</h1>
-  <p>This is a Twitter Bootstrap template for the markdown static site generator. This page is using the standard fixed layout markup.</p>
-  <p><a href="fluid.html" class="btn btn-primary btn-large">See a fluid layout &raquo;</a></p>
+<div class="row">
+  <div class="hero-unit span4 offset2">
+    <h1>IP PBX Addons</h1>
+    <p>Vos.io is suite of addons for your IP PBX and Hosted IP PBX to make help it perform more like an enterprise phone system.
+    </p>
+    <h3>No Commitments! No Contracts!</h3>
+    <p>
+      <%= link_to 'Get Started &raquo;',
+          url_for(:get_started),
+          :class => "btn btn-primary btn-large" %>
+    </p>
+  </div>
+  <div class="span3 well">
+    <h3>Request Private Beta Access</h3>
+    <p>
+      <%= app_name %> is currently in private beta - add your email to the access list to request access.
+    </p>
+    <form>
+      <input type="text" name="name" placeholder="your name"/>
+      <input type="email" name="email" placeholder="your@email.com"/>
+      <label>I&apos;m most interested in:</label>
+      <select name="product">
+        <option value="music">Music Streams</option>
+        <option value="voicemail">Amped Voicemail</option>
+      </select>
+      <button type="submit" class="btn btn-inverse">Let me know more!</button>
+    </form>
+  </div>
 </div>
 
 <!-- Example row of columns -->
 <div class="row">
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
+  <div class="span4 offset2">
+    <h2>Music Streams</h2>
+    <p>
+      <%= app_name %> <strong>Music Streams</strong> is about giving you control over your hold music streams.  Are you streaming stock classical or jazz to your customers on hold and missing a <b>marketing opportunity</b>?  Use <%= app_name %> Music Streams to inject custom marketing messages or up to date announcements.
+    </p>
+    <ul>
+      <li>Custom Streaming Music on Hold</li>
+      <li>Configurable Marketing Messages</li>
+      <li>Retrieve streams via HTTP, SIP, RTP, and Shoutcast</li>
+    </ul>
+    <p>
+      <%= link_to 'View details &raquo;',
+          url_for(:music),
+          :class => "btn btn-info" %>
+    </p>
   </div>
   <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
-  </div>
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
+    <h2>Amped Voicemail</h2>
+    <p>
+      Does your PBX just email you a voicemail?  Unbox your voicemail system and open it up to <%= app_name %> <strong>Amped Voicemail</strong> and let your employees access and manage their voicemail directly on the web, their phone, and your CRM.
+    </p>
+    <ul>
+      <li>Integrate Voicemail with your CRM</li>
+      <li>Create shared <strong>Voicemail Circles</strong></li>
+      <li>Access/Manage Voicemail online</li>
+    </ul>
+    <p>
+      <%= link_to 'View details &raquo;',
+          url_for(:vm),
+          :class => "btn btn-info" %>
+    </p>
   </div>
 </div>
 

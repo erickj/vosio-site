@@ -30,17 +30,21 @@
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
+  <body class="<%= body_classes %>">
 
     <%= partial "header" %>
 
-    <div class="<%= data.page.fluid? ? 'container-fluid' : 'container' %>">
+    <section class="main">
 
-      <%= yield %>
+      <div class="<%= data.page.fluid? ? 'container-fluid' : 'container' %>">
 
-      <%= partial "footer" %>
+        <%= yield %>
 
-    </div> <!-- /container -->
+      </div> <!-- /container -->
+
+    </section>
+
+    <%= partial "footer" %>
 
     <%= partial "scripts" %>
 

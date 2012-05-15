@@ -1,20 +1,26 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="#"><%= logo %></a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li class="active"><a href="https://github.com/eejjjj82/middleman-twitter-bootstrap">Code</a></li>
-          <li><a target="_blank" href="http://middlemanapp.com/">Docs</a></li>
-          <li><a target="_blank" href="https://github.com/middleman/middleman">Middleman</a></li>
-          <li><a target="_blank" href="http://warpedvisions.org/projects/markdown-cheat-sheet/">Markdown Cheat Sheet</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+<section class="header">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/"><%= logo %></a>
+        <div class="nav-collapse pull-right">
+          <ul class="nav">
+            <li>
+              <%= link_to 'Music',
+                  url_for(:music) %>
+            </li>
+            <li>
+              <%= link_to 'Voicemail',
+                  url_for(:vm) %>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
   </div>
-</div>
+</section>

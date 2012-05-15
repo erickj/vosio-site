@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
+gem "rake"
 gem "middleman", "~>2.0.15"
 
 group :development do

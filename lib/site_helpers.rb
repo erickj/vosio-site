@@ -1,10 +1,6 @@
 module SiteHelpers
   def page_title
-    if data.page.title
-      [site_title, data.page.title].join(": ")
-    else
-      site_title
-    end
+    [app_name, data.page.title || site_slogan].join " | "
   end
 
   def copyright_years(start_year=nil)

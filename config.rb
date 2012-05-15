@@ -57,11 +57,11 @@ helpers do
   def url_for(sym)
     case sym
     when :get_started then
-      "getting-stared.html"
+      "getting-started"
     when :music then
-      "music.html"
+      "music"
     when :vm then
-      "voicemail.html"
+      "voicemail"
     else
       "404.html"
     end
@@ -71,15 +71,11 @@ helpers do
     "vos.io"
   end
 
-  def site_title
-    "< %s | PBX Enhancements >"%app_name
+  def site_slogan
+    "IP PBX Enhancements"
   end
 
   def body_classes
-  end
-
-  def logo
-    "< %s >"%app_name
   end
 end
 
@@ -98,13 +94,20 @@ activate :scss_reroute
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
 
+require 'rack/rewrite'
+use Rack::Rewrite do
+  rewrite '/music', '/music.html'
+  rewrite '/voicemail', '/voicemail.html'
+  rewrite '/get-started', '/get-started.html'
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
   
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
   
   # Enable cache buster
   # activate :cache_buster
